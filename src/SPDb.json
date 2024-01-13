@@ -1,0 +1,23 @@
+[
+    {
+        "Number": "3",
+        "Player Name": "Chris Paul",
+        "Position": "Point Guard",
+        "Team Role": "Starter",
+        "Playing Minutes": "30"
+    },
+    {
+        "Number": "24",
+        "Player Name": "Kobe Bryant",
+        "Position": "Shooting Guard",
+        "Team Role": "Starter",
+        "Playing Minutes": "24"
+    },
+    {
+        "Number": "13",
+        "Player Name": "Jake",
+        "Position": "Point Guard",
+        "Team Role": "Starter",
+        "Playing Minutes": "28"
+    }
+]
