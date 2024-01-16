@@ -31,17 +31,17 @@ class SPDb:
         
 
     def update_player(self, new_name, new_position, new_role, new_minutes, number):
+        print('TODO: update_player')
         for i in self.playerList:
-            print('TODO: update_player')
             if i.number == number:
                 self.playerList.remove(i)
                 i = SPDbEntry(number=number, name = new_name, position = new_position, role = new_role, minutes = new_minutes)
                 self.playerList.append(i)
 
     
-    def import_csv(self):
+    def import_csv(self, filename):
         print('TODO: import_csv')
-        with open(self.dbName, 'r') as file:
+        with open(filename, 'r') as file:
             words = file.readlines()
             words = words[1:]
         for word in words:
