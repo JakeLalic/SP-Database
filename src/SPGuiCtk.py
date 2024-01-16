@@ -133,7 +133,7 @@ class SPDbGuiCtk(customtkinter.CTk):
         self.tree.heading('Team Role', text='Team Role')
         self.tree.heading('Playing Minutes', text='Playing Minutes')
 
-        self.tree.place(x=750, y=50, width=1000, height=750)
+        self.tree.place(x=750, y=150, width=1000, height=550)
         self.tree.bind('<ButtonRelease>', self.read_display_data)
 
         self.add_to_treeview()
@@ -305,7 +305,7 @@ class SPDbGuiCtk(customtkinter.CTk):
         filename = filedialog.askopenfilename(title= "Select A File" , filetypes=[("Excel files", "*.csv")])
         self.db.import_csv(filename)
         self.add_to_treeview()
-        messagebox.showinfo('Success', f'Data imported from {filename}')
+        messagebox.showinfo('Success', f'Data has been imported')
 
     def export_to_csv(self):
         self.db.export_csv()
