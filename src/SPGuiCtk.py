@@ -305,7 +305,7 @@ class SPDbGuiCtk(customtkinter.CTk):
         filename = filedialog.askopenfilename(title= "Select A File" , filetypes=[("Excel files", "*.csv")])
         self.db.import_csv(filename)
         self.add_to_treeview()
-        messagebox.showinfo('Success', f'Data imported from {self.db.dbName}')
+        messagebox.showinfo('Success', f'Data imported from {filename}')
 
     def export_to_csv(self):
         self.db.export_csv()
