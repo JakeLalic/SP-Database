@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import ttk
 import tkinter as tk
 from tkinter import messagebox
+from tkinter import filedialog
 from SPDb import SPDb
 
 class SPDbGuiCtk(customtkinter.CTk):
@@ -301,7 +302,8 @@ class SPDbGuiCtk(customtkinter.CTk):
             messagebox.showinfo('Success', 'Player has been updated')
 
     def import_to_csv(self):
-        self.db.import_csv()
+        filename = filedialog.askopenfilename(title= "Select A File" , filetypes=[("Excel files", "*.csv")])
+        self.db.import_csv(filename)
         self.add_to_treeview()
         messagebox.showinfo('Success', f'Data imported from {self.db.dbName}')
 
